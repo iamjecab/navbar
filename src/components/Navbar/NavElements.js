@@ -42,23 +42,6 @@ export const Navigation = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    #mobile {
-        display: flex;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #f8edeb;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        a {
-            flex-basis: 12%;
-        }
-    }
 `;
 
 export const LinkContainer = styled.div`
@@ -99,13 +82,13 @@ export const ToggleIcon = styled(GiHamburgerMenu)`
     cursor: pointer;
 `;
 
-export const MobileMenu = styled.div`
-    display: none;
-`;
-
 export const CloseButton = styled(AiOutlineClose)`
     font-size: 40px;
     position: absolute;
     top: 3%;
     right: 3%;
+`;
+
+export const Page = styled.div`
+    height: 5000px;
 `;

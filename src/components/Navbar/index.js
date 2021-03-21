@@ -9,9 +9,9 @@ import {
     Link,
     ToggleContainer,
     ToggleIcon,
-    MobileMenu,
-    CloseButton,
+    Page,
 } from "./NavElements";
+import MobileMenu from "../MobileMenu";
 
 const Nav = () => {
     const [showMenu, setshowMenu] = useState(false);
@@ -44,19 +44,12 @@ const Nav = () => {
                     <ToggleContainer>
                         <ToggleIcon onClick={Toggle} />
                     </ToggleContainer>
-                    <MobileMenu id={showMenu ? "mobile" : null}>
-                        <CloseButton onClick={Toggle} />
-
-                        <Link>Home</Link>
-
-                        <Link>About</Link>
-
-                        <Link>Blog</Link>
-
-                        <Link>Contact</Link>
-                    </MobileMenu>
+                    {showMenu ? (
+                        <MobileMenu Toggle={Toggle}></MobileMenu>
+                    ) : null}
                 </Navigation>
             </NavContainer>
+            <Page></Page>
         </>
     );
 };
